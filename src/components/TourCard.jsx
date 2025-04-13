@@ -25,7 +25,7 @@ const TourCard = ({ id, name, image, info, price, removeTour }) => { // TourCard
                 <button className="read-more" onClick={toggleReadMore}>
                     {readMore ? "Show Less" : "Read More"} {/* Button to toggle read more */}
                 </button>
-                <button className="Not Interested" onClick={() => removeTour(id)}>Remove Tour</button> {/* Button to remove the tour */}
+                <button className="not-interested" onClick={() => removeTour(id)}>Not Interested</button> {/* Button to remove the tour */}
                 </div>
             </article>
         );
