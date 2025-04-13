@@ -1,6 +1,6 @@
 // Task 2 Fetch and render tour list with useEffect and state
 
-import React, { useState, useEffect, use } from "react"; // Importing React, useState and useEffect 
+import React, { useState, useEffect } from "react"; // Importing React, useState and useEffect 
 
 import TourCard from "./TourCard"; // Importing the TourCard component
 
@@ -46,6 +46,18 @@ const Gallery = ({ tours, removeTour }) => { // Gallery component to display the
         );
     }
 
+    // Task 4 Handle loading and error states gracefully
+
+if (loading) {
+    return <h2>Loading...</h2>; // Display loading message while data is being fetched
+    
+}
+
+if (error) {
+    return <h2>Error fetching tours.</h2>; // Display error message if there is an error while fetching data
+
+}
+
     return (
         <section className="gallery"> {/* Main gallery section */}
         {tours.map((tour) => ( // Map through the tours array and render a TourCard for each tour
@@ -54,6 +66,8 @@ const Gallery = ({ tours, removeTour }) => { // Gallery component to display the
         </section>
     );
 }
+
+
 
 
 export default Gallery; // Exporting the Gallery component so it can be used in App.jsx
