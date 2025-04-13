@@ -8,7 +8,7 @@ const url = "https://api.allorigins.win/raw?url=https://course-api.com/react-tou
 
 const Gallery = ({ tours, setTours, onRemove }) => { // Gallery component to display the list of tours
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true); // State to manage the loading state
     
     const [error, setError] = useState(false); // State to manage error
     
