@@ -6,7 +6,7 @@ import TourCard from "./TourCard"; // Importing the TourCard component
 
 const url = "https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project"; // URL to fetch the tours data from the Api that uses a proxy to avoid permission issues
 
-const Gallery = ({ tours, setTours, removeTour }) => { // Gallery component to display the list of tours
+const Gallery = ({ tours, setTours, onRemove }) => { // Gallery component to display the list of tours
 
     const [loading, setLoading] = useState(true);
     
@@ -77,7 +77,7 @@ if (tours.length === 0) { // If there are no tours to display
     return (
         <section className="gallery"> {/* Main gallery section */}
         {tours.map((tour) => ( // Map through the tours array and render a TourCard for each tour
-            <TourCard key={tour.id} {...tour} removeTour={removeTour} /> // Pass tour data and removeTour function as props to TourCard
+            <TourCard key={tour.id} {...tour} onRemove={onRemove} /> // Pass tour data and removeTour function as props to TourCard
         ))}
         </section>
     );

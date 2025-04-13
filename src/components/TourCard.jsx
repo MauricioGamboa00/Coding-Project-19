@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"; // Importing React and useState 
 
-const TourCard = ({ id, name, image, info, price, removeTour }) => { // TourCard component that displays individual tour details
+const TourCard = ({ id, name, image, info, price, onRemove }) => { // TourCard component that displays individual tour details
 
     const [readMore, setReadMore] = useState(false); // State to manage read more 
 
@@ -25,7 +25,7 @@ const TourCard = ({ id, name, image, info, price, removeTour }) => { // TourCard
                 <button className="read-more" onClick={toggleReadMore}>
                     {readMore ? "Show Less" : "Read More"} {/* Button to toggle read more */}
                 </button>
-                <button className="not-interested" onClick={() => removeTour(id)}>Not Interested</button> {/* Button to remove the tour */}
+                <button className="not-interested" onClick={() => onRemove(id)}>Not Interested</button> {/* Button to remove the tour */}
                 </div>
             </article>
         );

@@ -23,7 +23,7 @@ function App() {
     <main>
       <h1>Our Tours</h1>
 
-      <Gallery tours={tours} setTours ={setTours} removeTour={removeTour} /> {/* Pass tours and removeTour function as props to Gallery */}  
+      <Gallery tours={tours} setTours ={setTours} onRemove={removeTour} /> {/* Pass tours and removeTour function as props to Gallery */}  
     </main>
   );
 
